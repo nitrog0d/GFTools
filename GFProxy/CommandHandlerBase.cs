@@ -1,4 +1,6 @@
-﻿namespace GFProxy.Protocol;
+﻿using GFTools.Common.Protocol;
+
+namespace GFProxy;
 
 public interface ICommandHandler {
     public bool Handle(ProxyClientBase client, CommandBase command);

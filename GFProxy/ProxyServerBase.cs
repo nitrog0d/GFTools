@@ -1,5 +1,4 @@
-﻿using GFProxy.Protocol;
-using System.Net.Sockets;
+﻿using System.Net.Sockets;
 
 namespace GFProxy;
 public abstract class ProxyServerBaseImpl {

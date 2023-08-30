@@ -1,4 +1,4 @@
-﻿namespace GFProxy.Protocol.CommandIDs;
+﻿namespace GFTools.Common.Protocol.CommandIDs;
 
 public static class ZoneServerCommands {
     public enum CZ_Commands : ushort {

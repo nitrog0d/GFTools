@@ -1,4 +1,4 @@
-﻿using GFProxy.Protocol;
+﻿using GFTools.Common.Protocol;
 
 namespace GFProxy.Commands.LoginServer;
 

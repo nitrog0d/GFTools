@@ -1,5 +1,5 @@
-﻿using GFProxy.Protocol;
-using GFProxy.Protocol.CommandIDs;
+﻿using GFTools.Common.Protocol;
+using GFTools.Common.Protocol.CommandIDs;
 
 namespace GFProxy;
 

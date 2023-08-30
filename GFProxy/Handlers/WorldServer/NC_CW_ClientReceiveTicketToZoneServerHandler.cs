@@ -1,5 +1,4 @@
 ﻿using GFProxy.Commands.WorldServer;
-using GFProxy.Protocol;
 using System.Text.Json;
 
 namespace GFProxy.Handlers.WorldServer;

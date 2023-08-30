@@ -1,4 +1,4 @@
-﻿namespace GFProxy.Protocol.CommandIDs;
+﻿namespace GFTools.Common.Protocol.CommandIDs;
 
 public static class MissionServerCommands {
     public const ushort NC_DBA_AgentDBACommand = 20;

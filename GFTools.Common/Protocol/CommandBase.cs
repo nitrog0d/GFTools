@@ -1,6 +1,7 @@
-﻿namespace GFProxy.Protocol;
+﻿namespace GFTools.Common.Protocol;
 
-public abstract class CommandBase {
+public abstract class CommandBase
+{
     public const ushort CommandID = 0;
     public abstract void Serialize(GFBinaryWriter writer);
     public abstract void Deserialize(GFBinaryReader reader);

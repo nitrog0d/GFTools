@@ -1,4 +1,4 @@
-﻿namespace GFProxy.Protocol.CommandIDs;
+﻿namespace GFTools.Common.Protocol.CommandIDs;
 
 public static class WorldServerCommands {
     public enum CW_Commands : ushort {

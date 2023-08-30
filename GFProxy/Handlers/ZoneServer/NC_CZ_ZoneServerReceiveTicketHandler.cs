@@ -1,5 +1,4 @@
 ﻿using GFProxy.Commands.ZoneServer;
-using GFProxy.Protocol;
 using System.Text.Json;
 
 namespace GFProxy.Handlers.ZoneServer;

@@ -1,4 +1,6 @@
-﻿namespace GFProxy.Protocol;
+﻿using GFTools.Common.Protocol;
+
+namespace GFTools.Common.Protocol;
 
 public class GFBinaryWriter : BinaryWriter {
     public GFBinaryWriter(Stream output) : base(output) { }

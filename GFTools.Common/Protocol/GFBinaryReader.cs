@@ -1,4 +1,6 @@
-﻿namespace GFProxy.Protocol;
+﻿using GFTools.Common.Protocol;
+
+namespace GFTools.Common.Protocol;
 
 public class GFBinaryReader : BinaryReader {
     public GFBinaryReader(Stream input) : base(input) { }
