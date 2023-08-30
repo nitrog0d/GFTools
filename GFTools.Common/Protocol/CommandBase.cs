@@ -6,6 +6,22 @@ public abstract class CommandBase
     public abstract void Serialize(GFBinaryWriter writer);
     public abstract void Deserialize(GFBinaryReader reader);
 
+    public byte[] Serialize() {
+        var memoryStream = new MemoryStream();
+        var binaryWriter = new GFBinaryWriter(memoryStream);
+
+        Serialize(binaryWriter);
+
+        return memoryStream.ToArray();
+    }
+
+    public void Deserialize(byte[] data) {
+        var memoryStream = new MemoryStream(data);
+        var binaryReader = new GFBinaryReader(memoryStream);
+
+        Deserialize(binaryReader);
+    }
+
     /*public virtual byte[] Serialize() {
         var memoryStream = new MemoryStream();
         using var binaryWriter = new BinaryWriter(memoryStream);

@@ -1,4 +1,5 @@
-﻿using Org.BouncyCastle.Crypto.Engines;
+﻿using GFTools.Common;
+using Org.BouncyCastle.Crypto.Engines;
 using Org.BouncyCastle.Crypto.Parameters;
 using System.Net.Sockets;
 using System.Security.Cryptography;
@@ -50,7 +51,7 @@ public class ProxyClientBase {
         ServerRSA = RSA.Create(new RSAParameters() { Modulus = rsaPublicKeyModulus, Exponent = exponent });
 
         // Get our own RSA key's params
-        var ourRsaParams = Program.RSA.ExportParameters(false);
+        var ourRsaParams = StaticRSAKey.RSA.ExportParameters(false);
 
         var ourRsaPublicKeyModulus = ourRsaParams.Modulus;
         var ourRsaExponent = ourRsaParams.Exponent;
@@ -72,7 +73,7 @@ public class ProxyClientBase {
 
     private void HandleClientRC4(byte[] data) {
         // Decrypt the RC4 Key with our RSA Key (That was sent from the server, first packet ever)
-        var decryptedRc4Key = Program.RSA.Decrypt(data, RSAEncryptionPadding.Pkcs1);
+        var decryptedRc4Key = StaticRSAKey.RSA.Decrypt(data, RSAEncryptionPadding.Pkcs1);
 
         // Initialize RC4 instances
         ClientRC4 = new RC4Engine();
@@ -302,7 +303,7 @@ public class ProxyClientBase {
         ServerSocket.Dispose();
 
         if (ClientSocket.Connected) {
-            Logger.VerboseLine("Client connection was openc closing...");
+            Logger.VerboseLine("Client connection was open, closing...");
             ClientSocket.Dispose();
         }
     }

@@ -1,6 +1,7 @@
 ﻿namespace GFTools.Common.Protocol.CommandIDs;
 
 public static class WorldServerCommands {
+    // Client <-> WorldServer
     public enum CW_Commands : ushort {
         NC_CW_ClientTextOutput = 39,
         NC_CW_ClientUpdateFamilyMember = 49,

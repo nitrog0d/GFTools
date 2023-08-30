@@ -1,7 +1,7 @@
 ﻿using Pastel;
 using System.Drawing;
 
-namespace GFProxy;
+namespace GFTools.Common;
 
 public class Logger {
     private static readonly Color VERBOSE = Color.Gray;
@@ -25,15 +25,15 @@ public class Logger {
     public void Warn(string message) => Write(Source, message, WARNING);
     public void Error(string message) => Write(Source, message, ERROR);
 
-    public static void VerboseLine(string message, string source = "GFProxy") => Verbose($"{message}{Environment.NewLine}", source);
-    public static void InfoLine(string message, string source = "GFProxy") => Info($"{message}{Environment.NewLine}", source);
-    public static void WarnLine(string message, string source = "GFProxy") => Warn($"{message}{Environment.NewLine}", source);
-    public static void ErrorLine(string message, string source = "GFProxy") => Error($"{message}{Environment.NewLine}", source);
+    public static void VerboseLine(string message, string source = "GFTools") => Verbose($"{message}{Environment.NewLine}", source);
+    public static void InfoLine(string message, string source = "GFTools") => Info($"{message}{Environment.NewLine}", source);
+    public static void WarnLine(string message, string source = "GFTools") => Warn($"{message}{Environment.NewLine}", source);
+    public static void ErrorLine(string message, string source = "GFTools") => Error($"{message}{Environment.NewLine}", source);
 
-    public static void Verbose(string message, string source = "GFProxy") => Write(source, message, VERBOSE);
-    public static void Info(string message, string source = "GFProxy") => Write(source, message, INFO);
-    public static void Warn(string message, string source = "GFProxy") => Write(source, message, WARNING);
-    public static void Error(string message, string source = "GFProxy") => Write(source, message, ERROR);
+    public static void Verbose(string message, string source = "GFTools") => Write(source, message, VERBOSE);
+    public static void Info(string message, string source = "GFTools") => Write(source, message, INFO);
+    public static void Warn(string message, string source = "GFTools") => Write(source, message, WARNING);
+    public static void Error(string message, string source = "GFTools") => Write(source, message, ERROR);
 
     public static void Write(string source, string message, Color color) {
         if (!LastNoNewline)

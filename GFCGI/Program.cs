@@ -12,11 +12,11 @@ public class Program {
     public static TcpClient ServerSocket { get; set; }
 
     public static void Main(string[] args) {
-        Console.Title = "CGITool";
+        Console.Title = "GFCGI";
 
-        Console.WriteLine("Connecting to CGI...");
+        Console.WriteLine("Connecting to ZoneServer CGI...");
 
-        ServerSocket = new TcpClient(ZoneServerIP, 20061);
+        ServerSocket = new TcpClient(ZoneServerIP, CGIPort);
 
         var serverThread = new Thread(HandleServerSocket);
         serverThread.Name = $"Server Socket Thread";
@@ -43,7 +43,7 @@ public class Program {
     }
 
     public static byte[] CreatePacket(byte[] data) {
-        var packetSize = data.Length;
+        var packetSize = (ushort)data.Length;
         var packet = new byte[sizeof(ushort) + packetSize];
 
         Buffer.BlockCopy(BitConverter.GetBytes(packetSize), 0, packet, 0, sizeof(ushort));

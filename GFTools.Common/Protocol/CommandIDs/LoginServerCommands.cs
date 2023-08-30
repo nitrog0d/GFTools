@@ -1,6 +1,7 @@
 ﻿namespace GFTools.Common.Protocol.CommandIDs;
 
 public static class LoginServerCommands {
+    // Client <-> LoginServer
     public enum CL_Commands : ushort {
         NC_CL_ClientGetAccountName = 7,
         NC_CL_ClientGetWorldServers = 5,
@@ -12,7 +13,7 @@ public static class LoginServerCommands {
         NC_CL_ServerLoginWorld = 2
     }
 
-    // Irrelevant
+    // GatewayServer
     public const ushort NC_G_ClientAccountLogin = 6;
     public const ushort NC_G_ClientAccountLogout = 7;
     public const ushort NC_G_ClientBillingLogin = 11;
@@ -31,6 +32,8 @@ public static class LoginServerCommands {
     public const ushort NC_G_ServerGetPointInfo = 4;
     public const ushort NC_G_ServerReqBuyItem = 5;
     public const ushort NC_G_ServerTextCommand = 14;
+
+    // TicketServer
     public const ushort NC_T_ClientGetTicket = 2;
     public const ushort NC_T_ClientUseTicket = 3;
     public const ushort NC_T_ServerGetTicket = 0;

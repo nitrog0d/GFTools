@@ -1,6 +1,7 @@
 ﻿namespace GFTools.Common.Protocol.CommandIDs;
 
 public static class ZoneServerCommands {
+    // Client <-> ZoneServer
     public enum CZ_Commands : ushort {
         NC_CZ_ClientAchievementUpdate = 478,
         NC_CZ_ClientAddAppellation = 407,
@@ -639,18 +640,22 @@ public static class ZoneServerCommands {
         NC_CZ_ZoneServerWhoIs = 63
     }
 
-    public const ushort NC_CG_ClientChannel = 5;
-    public const ushort NC_CG_ClientCharLocate = 6;
-    public const ushort NC_CG_ClientCharacter = 3;
-    public const ushort NC_CG_ClientCharacterList = 2;
+    // GMTool <-> ZoneServer
+    public enum CG_Commands : ushort {
+        NC_CG_ServerTextCommand = 0,
+        NC_CG_ServerLogin = 1,
+        NC_CG_ClientCharacterList = 2,
+        NC_CG_ClientCharacter = 3,
+        NC_CG_ClientTextOutput = 4,
+        NC_CG_ClientChannel = 5,
+        NC_CG_ClientCharLocate = 6
+    }
+
     public const ushort NC_CG_ClientDataTest = 0;
     public const ushort NC_CG_ClientGetContainerItem = 0;
     public const ushort NC_CG_ClientGetMail = 0;
     public const ushort NC_CG_ClientGetMissionState = 0;
     public const ushort NC_CG_ClientGetMoney = 0;
-    public const ushort NC_CG_ClientTextOutput = 4;
-    public const ushort NC_CG_ServerLogin = 1;
-    public const ushort NC_CG_ServerTextCommand = 0;
     public const ushort NC_DBA_AgentDBACommand = 20;
     public const ushort NC_DBA_ClientAddFamilyMember = 31;
     public const ushort NC_DBA_ClientAllFamily = 26;
