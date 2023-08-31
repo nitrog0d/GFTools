@@ -6,7 +6,7 @@ namespace CGITool;
 public class Program {
     public const string CGIKey = "0KjaM85BjfqjA";
 
-    public const string ZoneServerIP = "172.18.216.109";
+    public const string ZoneServerIP = "gfevilpeace.com";
     public const int CGIPort = 20061;
 
     public static TcpClient ServerSocket { get; set; }

@@ -29,8 +29,9 @@ public static class Program {
 
         ServerSocket = new TcpClient(ZoneServerIP, GMToolPort);
 
-        var serverThread = new Thread(HandleServerSocket);
-        serverThread.Name = $"Server Socket Thread";
+        var serverThread = new Thread(HandleServerSocket) {
+            Name = $"Server Socket Thread"
+        };
         serverThread.Start();
 
         Console.WriteLine("Connected!");
