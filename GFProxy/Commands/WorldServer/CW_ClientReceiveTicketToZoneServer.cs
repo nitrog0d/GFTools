@@ -2,10 +2,10 @@
 using GFTools.Common.Protocol.CommandIDs;
 using System.Net;
 
-namespace GFProxy.Commands.ZoneServer;
+namespace GFProxy.Commands.WorldServer;
 
-public class NC_CZ_ZoneServerReceiveTicket : CommandBase {
-    public new const ushort CommandID = (ushort)ZoneServerCommands.CZ_Commands.NC_CZ_ZoneServerReceiveTicket;
+public class CW_ClientReceiveTicketToZoneServer : CommandBase {
+    public new const ushort CommandID = (ushort)WorldServerCommands.CW_Commands.CW_ClientReceiveTicketToZoneServer;
 
     public int Unk1 { get; set; }
     public string OwnIP { get; set; }

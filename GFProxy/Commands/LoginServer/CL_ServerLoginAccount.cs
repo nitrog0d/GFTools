@@ -3,8 +3,8 @@ using GFTools.Common.Protocol.CommandIDs;
 
 namespace GFProxy.Commands.LoginServer;
 
-public class NC_CL_ServerLoginAccount : CommandBase {
-    public new const ushort CommandID = (ushort)LoginServerCommands.CL_Commands.NC_CL_ServerLoginAccount;
+public class CL_ServerLoginAccount : CommandBase {
+    public new const ushort CommandID = (ushort)LoginServerCommands.CL_Commands.CL_ServerLoginAccount;
 
     public string Account { get; set; }
     public string Password { get; set; }

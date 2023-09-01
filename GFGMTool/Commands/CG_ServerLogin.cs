@@ -4,7 +4,7 @@ using GFTools.Common.Protocol.CommandIDs;
 namespace GFGMTool.Commands;
 
 public class CG_ServerLogin : CommandBase {
-    public new const ushort CommandID = (ushort)ZoneServerCommands.CG_Commands.NC_CG_ServerLogin;
+    public new const ushort CommandID = (ushort)ZoneServerCommands.CG_Commands.CG_ServerLogin;
 
     public string Account { get; set; }
     public string Password { get; set; }

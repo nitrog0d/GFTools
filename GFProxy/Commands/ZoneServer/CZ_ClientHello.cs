@@ -1,10 +1,10 @@
 ﻿using GFTools.Common.Protocol;
 using GFTools.Common.Protocol.CommandIDs;
 
-namespace GFProxy.Commands.LoginServer;
+namespace GFProxy.Commands.ZoneServer;
 
-public class NC_CL_ClientHello : CommandBase {
-    public new const ushort CommandID = (ushort)LoginServerCommands.CL_Commands.NC_CL_ClientHello;
+public class CZ_ClientHello : CommandBase {
+    public new const ushort CommandID = (ushort)ZoneServerCommands.CZ_Commands.CZ_ClientHello;
 
     public float VersionNumber { get; set; }
 

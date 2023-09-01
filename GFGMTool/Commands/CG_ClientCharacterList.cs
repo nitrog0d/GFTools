@@ -4,7 +4,7 @@ using GFTools.Common.Protocol.CommandIDs;
 namespace GFGMTool.Commands;
 
 public class CG_ClientCharacterList : CommandBase {
-    public new const ushort CommandID = (ushort)ZoneServerCommands.CG_Commands.NC_CG_ClientCharacterList;
+    public new const ushort CommandID = (ushort)ZoneServerCommands.CG_Commands.CG_ClientCharacterList;
 
     public Character[] Characters { get; set; }
 

@@ -4,8 +4,8 @@ using System.Net;
 
 namespace GFProxy.Commands.WorldServer;
 
-public class NC_CW_ClientReceiveTicketToZoneServer : CommandBase {
-    public new const ushort CommandID = (ushort)WorldServerCommands.CW_Commands.NC_CW_ClientReceiveTicketToZoneServer;
+public class CW_ServerReceiveTicket : CommandBase {
+    public new const ushort CommandID = (ushort)WorldServerCommands.CW_Commands.CW_ServerReceiveTicket;
 
     public int Unk1 { get; set; }
     public string OwnIP { get; set; }

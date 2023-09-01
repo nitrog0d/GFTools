@@ -11,8 +11,8 @@ using System.Text.Json;
 namespace GFGMTool;
 
 public static class Program {
-    public const string ZoneServerIP = "172.18.216.109";
-    public const int GMToolPort = 10321;
+    public const string ZoneServerIP = "104.20.138.47";
+    public const int GMToolPort = 6545;
 
     public static Logger Logger { get; private set; }
     public static TcpClient ServerSocket { get; set; }
@@ -62,12 +62,12 @@ public static class Program {
         Buffer.BlockCopy(packet, sizeof(ushort), command, 0, command.Length);
 
         switch (commandId) {
-            case ZoneServerCommands.CG_Commands.NC_CG_ClientTextOutput:
+            case ZoneServerCommands.CG_Commands.CG_ClientTextOutput:
                 var textOutput = new CG_ClientTextOutput();
                 textOutput.Deserialize(command);
                 Logger.InfoLine($"CG_ClientTextOutput - {JsonSerializer.Serialize(textOutput)}");
                 break;
-            case ZoneServerCommands.CG_Commands.NC_CG_ClientCharacterList:
+            case ZoneServerCommands.CG_Commands.CG_ClientCharacterList:
                 var characterList = new CG_ClientCharacterList();
                 characterList.Deserialize(command);
                 Logger.InfoLine($"CG_ClientCharacterList - {JsonSerializer.Serialize(characterList)}");
@@ -78,12 +78,12 @@ public static class Program {
 
                 ServerSocket.GetStream().Write(CreatePacket(CreateMessage(clientCharacter)));*/
                 break;
-            case ZoneServerCommands.CG_Commands.NC_CG_ClientCharacter:
+            case ZoneServerCommands.CG_Commands.CG_ClientCharacter:
                 var clientCharacter = new CG_ClientCharacter();
                 clientCharacter.Deserialize(command);
                 Logger.InfoLine($"CG_ClientCharacter - {JsonSerializer.Serialize(clientCharacter)}");
                 break;
-            case ZoneServerCommands.CG_Commands.NC_CG_ServerTextCommand:
+            case ZoneServerCommands.CG_Commands.CG_ServerTextCommand:
                 var textOutput2 = new CG_ServerTextCommand();
                 textOutput2.Deserialize(command);
                 Logger.InfoLine($"CG_ServerTextCommand - {JsonSerializer.Serialize(textOutput2)}");
